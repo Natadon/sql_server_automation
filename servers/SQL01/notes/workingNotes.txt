@@ -1,0 +1,14 @@
+-- This is what I would like to get generated for each database
+
+use master
+go
+exec dbo.sp_DatabaseRestore
+	@Database = 'AdventureWorksLT2019',
+	@RestoreDatabaseName = 'KyleIsCool',
+	--@MoveFiles = 1,
+	--@MoveDataDrive = 'C:\temp\',
+	--@MoveLogDrive = 'C:\temp\', 
+	@BackupPathFull = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorksLT2019\FULL',
+	@BackupPathDiff = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorksLT2019\DIFF',
+	--@BackupPathLog = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorksLT2019\LOG',
+	@RunRecovery = 1
