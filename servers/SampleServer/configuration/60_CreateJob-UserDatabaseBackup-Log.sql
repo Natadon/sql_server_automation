@@ -2,6 +2,7 @@ USE [msdb]
 GO
 
 /****** Object:  Job [DatabaseBackup - USER_DATABASES - LOG]    Script Date: 8/11/2021 10:31:43 PM ******/
+-- try this using:  @job_name
 EXEC msdb.dbo.sp_delete_job @job_id=N'067587e2-a886-4cc5-a91c-d01be0c05e64', @delete_unused_schedule=1
 GO
 
